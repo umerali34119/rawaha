@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rawada</title>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="src/output.css">
     <link rel="stylesheet" href="scss/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,15 +14,22 @@
     <header >
         <div class= " grid grid-cols-3 items-center c-w">
             <div>
-                <ul class="flex text-white gap-5 text-sm ">
-                    <li><a href="#" class="">All Products </a></li>
+                <!-- For mobile -->
+                <div class="block md:hidden text-white text-3xl">
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+
+                <!-- For desktop -->
+                <ul class="hidden md:flex text-white gap-5 text-sm">
+                    <li><a href="#" class="">All Products</a></li>
                     <li><a href="#">Exclusives <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
                     <li><a href="#">Classifications <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
-                    <li><a href="#">New Arrivals </a></li>
+                    <li><a href="#">New Arrivals</a></li>
                 </ul>
+
             </div>
             <div class="flex justify-self-center">
-                <img src="images/Rawaha_Logo-white.webp" alt="" class="w-36">
+                <img src="images/Rawaha_Logo-white.webp" alt="" class="w-16 md:w-28 ">
             </div>
             <div class="flex justify-end">
                 <ul class="flex text-white gap-5 text-sm items-baseline">
@@ -29,16 +37,16 @@
                     <li><a href="#"><img src="images/user (6).svg" alt=""></a></li>
                     <li><a href="#" class="relative"><img src="images/shopping-bag (1).svg" alt="">
                          <span class="absolute right-[-12px] top-[-12px] h-5 w-5 bg-white rounded-full text-black flex items-center justify-center">0</span> </a></li>
-                    <li><a href="#">RS.0.00</a></li>
+                    <li class="hidden md:block"><a href="#">RS.0.00</a></li>
                 </ul>
             </div>
         </div>
     </header>
 
     <!-- hero-banner  -->
-    <div class="hero-banner h-screen bg-cover bg-center mt-[-126px] flex items-center">
+    <div class="hero-banner h-screen bg-cover bg-center mt-[-98px] flex items-center">
         <div class="text-white c-w">
-            <h1 class="text-6xl font-bold my-8">Winter Collections</h1>
+            <h1 class="text-4xl md:text-6xl font-bold my-8">Winter Collections</h1>
             <p class="mb-8">Explore Rawada New Collections</p>
             <a href="#" class=" border px-5 py-3 rounded ">Shop Now</a>
         </div>
@@ -46,7 +54,7 @@
 
     <!-- feture section  -->
     <div class="pt-10 pb-10 bg-slate-50">
-        <div class="flex gap-8 c-w justify-between flex-wrap">
+        <div class=" flex flex-wrap md:grid md:grid-cols-4 gap-8 c-w justify-between ">
 
             <div class="flex gap-5 items-center border-r">
                 <i class="fa fa-money text-5xl text-amber-600" aria-hidden="true"></i>
@@ -78,12 +86,12 @@
 
     <!-- tab-section  -->
     <div>
-        <div class="flex justify-between items-center c-w h-48">
+        <div class="flex flex-wrap justify-between items-center c-w h-48">
             <div>
-                <div class="flex gap-8 items-center justify-center text-center">
-                    <div class="border-dashed border-2 border-black rounded-md px-5 py-1"><img class="m-auto"  src="images/OriginalCreation.png" alt="">New Arrivals</div>
-                    <div class="border-dashed border-2 border-black rounded-md px-5 py-1"><img class="m-auto" src="images/Best_Sellers.png" alt="">Best Sellers</div>
-                    <div class="border-dashed border-2 border-black rounded-md px-5 py-1"><img class="m-auto"  src="images/Restocked.png" alt="">Just Restocked</div>
+                <div class="flex gap-2 md:gap-8 items-center justify-center text-center">
+                    <div class="border-dashed border-2 border-black rounded-md px-3 md:px-5 py-1"><img class="m-auto"  src="images/OriginalCreation.png" alt="">New Arrivals</div>
+                    <div class="border-dashed border-2 border-black rounded-md px-3 md:px-5 py-1"><img class="m-auto" src="images/Best_Sellers.png" alt="">Best Sellers</div>
+                    <div class="border-dashed border-2 border-black rounded-md px-3 md:px-5 py-1"><img class="m-auto"  src="images/Restocked.png" alt="">Just Restocked</div>
                 </div>
             </div>
             <div>
@@ -92,8 +100,8 @@
         </div>
     </div>
 
-    <div class="c-w flex gap-7">
-        <div class="w-1/5 relative">
+    <div class="c-w flex gap-7 flex-wrap md:grid md:grid-cols-5 mb-14">
+        <div class=" relative">
             <img src="images/p1-img1.webp" alt="" class="transition-opacity duration-300 opacity-100 hover:opacity-0">
             <img src="images/p1-img2.webp" alt="" class="bg-black overflow-hidden transition-opacity duration-1000 opacity-0 hover:opacity-100 absolute inset-0">
             <div>
@@ -108,7 +116,7 @@
                 </ul>
             </div>
         </div>
-        <div class="w-1/5 relative">
+        <div class=" relative">
             <img src="images/p1-img1.webp" alt="" class="transition-opacity duration-300 opacity-100 hover:opacity-0">
             <img src="images/p1-img2.webp" alt="" class="bg-black overflow-hidden transition-opacity duration-1000 opacity-0 hover:opacity-100 absolute inset-0">
             <div>
@@ -123,7 +131,7 @@
                 </ul>
             </div>
         </div>
-        <div class="w-1/5 relative">
+        <div class=" relative">
             <img src="images/p1-img1.webp" alt="" class="transition-opacity duration-300 opacity-100 hover:opacity-0">
             <img src="images/p1-img2.webp" alt="" class="bg-black overflow-hidden transition-opacity duration-1000 opacity-0 hover:opacity-100 absolute inset-0">
             <div>
@@ -138,7 +146,7 @@
                 </ul>
             </div>
         </div>
-        <div class="w-1/5 relative">
+        <div class=" relative">
             <img src="images/p1-img1.webp" alt="" class="transition-opacity duration-300 opacity-100 hover:opacity-0">
             <img src="images/p1-img2.webp" alt="" class="bg-black overflow-hidden transition-opacity duration-1000 opacity-0 hover:opacity-100 absolute inset-0">
             <div>
@@ -153,7 +161,7 @@
                 </ul>
             </div>
         </div>
-        <div class="w-1/5 relative">
+        <div class=" relative">
             <img src="images/p1-img1.webp" alt="" class="transition-opacity duration-300 opacity-100 hover:opacity-0">
             <img src="images/p1-img2.webp" alt="" class="bg-black overflow-hidden transition-opacity duration-1000 opacity-0 hover:opacity-100 absolute inset-0">
             <div>
@@ -172,7 +180,269 @@
     </div>
 
 
-    
+    <!-- collections category -->
+
+    <div class="block my-11">
+        <div class="flex gap-3 flex-wrap md:grid md:grid-cols-6 md:gap-8 c-w ">
+            <div>
+                <img class="rounded-lg" src="images/perfume-1.webp" alt=""><h4 class="grid justify-center py-1 ">Male</h4>
+                <div class="flex justify-center relative">
+                    <div class=" z-40 mr-[-20px] h-7 w-7 bg-slate-300 border border-cyan-200 rounded-full flex justify-center items-center"><span class="text-[10px]">+150</span></div>
+                    <div class=" z-30 mr-[-36px] h-7 w-7 bg-slate-300 border border-cyan-200 rounded-full"><img class="rounded-full" src="images/perfume-4.webp" alt=""></div>
+                    <div class=" z-20 mr-[-11px] h-7 w-7 bg-slate-300 border border-cyan-200 rounded-full"><img class="rounded-full" src="images/perfume-4.webp" alt=""></div>
+                    <div class=" z-10 h-7 w-7 bg-slate-300 border border-cyan-200 rounded-full"><img class="rounded-full" src="images/perfume-4.webp" alt=""></div>
+                </div>
+                
+            </div>
+            <div>
+                <img class="rounded-lg" src="images/perfume-2.webp" alt=""><h4 class="grid justify-center py-1 ">Female</h4>
+                <div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                </div>
+            </div>
+            <div>
+                <img class="rounded-lg" src="images/perfume-3.webp" alt=""><h4 class="grid justify-center py-1 ">Unisex</h4>
+                <div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                </div>
+            </div>
+            <div>
+                <img class="rounded-lg" src="images/perfume-4.webp" alt=""><h4 class="grid justify-center py-1 ">Formal</h4>
+                <div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                </div>
+            </div>
+            <div>
+                <img class="rounded-lg" src="images/perfume-5.webp" alt=""><h4 class="grid justify-center py-1 ">Casual</h4>
+                <div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                </div>
+            </div>
+            <div>
+                <img class="rounded-lg" src="images/perfume-6.webp" alt=""><h4 class="grid justify-center py-1 ">Ittar Collections</h4>
+                <div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                    <div><span></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="grid grid-cols-2  c-w">
+        <div class="bg-slate-800 flex justify-center items-center text-center">
+            <div class="text-white">
+                <h4 class="text-sm font-bold">BUNDLES</h4>
+                <p class="text-6xl ">Lasting Impressions</p>
+                <button class="h-10 w-28  bg-white text-amber-800 my-6"><a href="#">Shop Now</a></button>
+            </div>
+        </div>
+        <div>
+            <img src="images/Bottom-Bundle.webp" alt="">
+        </div>
+    </div>
+
+    <div class="bg-slate-200 my-14">
+        <div class="grid grid-cols-2 c-w ">
+            <div class="flex justify-center"><img src="images/Best-Sellers.jpg" alt=""></div>
+            <div class="flex justify-center items-center">
+                <div class="w-[70%]">
+                    <h2 class="text-3xl font-bold mb-7">OUR BEST SELLERS</h2>
+                    <p class="leading-10 text-xl">Inspired by Acqua Di Gio & Issey Miyaki | Inspired by Oud Ispahan | 
+                    Inspired by Versace Eros | Inspired by Baccarat Rouge 540 | Inspired 
+                    by Creed Aventus | Inspired by Aventus for Her | Inspired by Yves Saint 
+                    Laurant Tuxedo | Inspired by Black Afgano | Inspired by Tuscan Leather |
+                     Inspired by J’adore </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- review-section  -->
+    <div class="flex justify-between c-w my-10 w-[70%]">
+        <div>
+            <div><h3 class="text-3xl font-bold">20,000+ satisfied customers 🤩</h3></div>
+            <div class="my-1"><img src="images/stars-head.jpeg" alt=""></div>
+            <div><p>from 491 reviews</p></div>
+        </div>
+        <div class="flex items-end">
+            <div><h3>Verified by</h3></div>
+            <div><img class="" src="images/judgeme.jpeg" alt=""></div>
+            
+        </div>
+    </div>
+
+    <div class="w-[70%] m-auto my-14">
+        <div class="flex gap-11 product-slider-container ">
+            <div class="shadow-2xl px-3 py-4 w-[300px] h-auto">
+                <img src="images/stars-head.jpeg" alt="">
+                <p>Very smooth and great blend. Very close to the OG. 
+                    The pricing is a bit high but the quality is great.</p>
+                <h3 class="text-sm font-bold pt-3 pb-1 ">Umar Inayat</h3>
+                <h4 class="text-xs font-medium text-gray-500">Frontend Webdeveloper</h4>
+            </div>
+            <div class="shadow-2xl px-3 py-4 w-[300px] h-auto">
+                <img src="images/stars-head.jpeg" alt="">
+                <p>Very smooth and great blend. Very close to the OG. 
+                    The pricing is a bit high but the quality is great.</p>
+                <h3 class="text-sm font-bold pt-3 pb-1 ">Umar Inayat</h3>
+                <h4 class="text-xs font-medium text-gray-500">Frontend Webdeveloper</h4>
+            </div>
+            <div class="shadow-2xl px-3 py-4 w-[300px] h-auto">
+                <img src="images/stars-head.jpeg" alt="">
+                <p>Very smooth and great blend. Very close to the OG. 
+                    The pricing is a bit high but the quality is great.</p>
+                <h3 class="text-sm font-bold pt-3 pb-1 ">Umar Inayat</h3>
+                <h4 class="text-xs font-medium text-gray-500">Frontend Webdeveloper</h4>
+            </div>
+           
+        </div>
+    </div>
+
+
+
+    <!-- blog -->
+    <div  class="grid grid-cols-2 gap-8 c-w my-14">
+        <div>
+            <img src="images/1.jpg" alt="">
+            <p class="text-sm text-amber-700 font-light pt-3">MARCH 27, 2023</p>
+            <h2 class="text-xl font-bold">What do Amber Oud Perfumes Smell Like?</h2>
+            <p class="py-4">What Are Amber Oud Perfumes Before we start going into the nitty-gritty of what amber o...</p>
+            <a href="#" class="border-b border-b-red-800 pb-1 my-2">Read More</a>
+        </div>
+        <div class="grid gap-7">
+            <div class="blog-sec  gap-2">
+                <div><img src="images/2.jpg" alt=""></div>
+                <div>
+                    <p class="text-sm text-amber-700 font-light pt-3">MARCH 27, 2023</p>
+                    <h2 class="text-xl font-bold">What do Amber Oud Perfumes Smell Like?</h2>
+                    <p class="py-1">What Are Amber Oud Perfumes Before we start going into the nitty-gritty of what amber o...</p>
+                    <a href="#" class="border-b border-b-red-800 pb-1 my-2">Read More</a>
+                </div>
+            </div>
+            <div class=" blog-sec gap-2">
+                <div><img src="images/3.jpg" alt=""></div>
+                <div>
+                    <p class="text-sm text-amber-700 font-light pt-3">MARCH 27, 2023</p>
+                    <h2 class="text-xl font-bold">What do Amber Oud Perfumes Smell Like?</h2>
+                    <p class="py-1">What Are Amber Oud Perfumes Before we start going into the nitty-gritty of what amber o...</p>
+                    <a href="#" class="border-b border-b-red-800 pb-1 my-2">Read More</a>
+                </div>
+            </div>
+            <div class="blog-sec  gap-2">
+                <div><img src="images/4.jpg" alt=""></div>
+                <div>
+                    <p class="text-sm text-amber-700 font-light pt-3">MARCH 27, 2023</p>
+                    <h2 class="text-xl font-bold">What do Amber Oud Perfumes Smell Like?</h2>
+                    <p class="py-1">What Are Amber Oud Perfumes Before we start going into the nitty-gritty of what amber o...</p>
+                    <a href="#" class="border-b border-b-red-800 pb-1 my-2">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- textarea  -->
+    <div class="bg-slate-100 py-10">
+        <div class="c-w text-center">
+            <h2 class="text-4xl font-bold mb-5">Embrace Individuality with Our Exclusive Impressions</h2>
+            <p class="leading-7 py-2 text-sm" >For far too long, the West and Middle East have dominated the market for scents.
+                 The French with their sense-numbing sensuality and the Arabs with their mystical potions.
+                  Is it that the rest of the world is too ahead of us, or we don’t have anything to offer?
+                 The latter couldn’t be further from the truth. Thus, began Rawaha’s mission.</p>
+            <p class="leading-7 py-2 text-sm" >For far too long, the West and Middle East have dominated the market for scents.
+                 The French with their sense-numbing sensuality and the Arabs with their mystical potions.
+                  Is it that the rest of the world is too ahead of us, or we don’t have anything to offer?
+                 The latter couldn’t be further from the truth. Thus, began Rawaha’s mission.</p>
+            <p class="leading-7 py-2 text-sm" >For far too long, the West and Middle East have dominated the market for scents.
+                 The French with their sense-numbing sensuality and the Arabs with their mystical potions.
+                  Is it that the rest of the world is too ahead of us, or we don’t have anything to offer?
+                 The latter couldn’t be further from the truth. Thus, began Rawaha’s mission.</p>
+            <p class="leading-7 py-2 text-sm" >For far too long, the West and Middle East have dominated the market for scents.
+                 The French with their sense-numbing sensuality and the Arabs with their mystical potions.
+                  Is it that the rest of the world is too ahead of us, or we don’t have anything to offer?
+                 The latter couldn’t be further from the truth. Thus, began Rawaha’s mission.</p>
+        </div>
+    </div>
+
+    <!-- footer  -->
+    <footer class="bg-slate-900 py-12">
+        <div >
+            <div class="text-center">
+                <h2 class="text-4xl text-amber-700 font-bold">Rawaha.</h2>
+                <p class="text-white py-5">Providing affordable luxury
+                     impressions of globally recognized fragrances to empower you and make your style unique.</p>
+                <div class="flex justify-center gap-2 ">
+                    <i class="fa fa-facebook h-9 w-9 rounded-full border text-white flex items-center justify-center" aria-hidden="true"></i>
+                    <i class="fa fa-facebook h-9 w-9 rounded-full border text-white flex items-center justify-center" aria-hidden="true"></i>
+                    <i class="fa fa-facebook h-9 w-9 rounded-full border text-white flex items-center justify-center" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="c-w flex gap-10">
+            <div>
+                <h2 class="text-xl text-amber-600 mb-5">Exclusive Collection</h2>
+                <ul>
+                    <li><a class="text-white" href="#">Own Creation</a></li>
+                    <li><a class="text-white" href="#">Own Creation</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-xl text-amber-600 mb-5">Exclusive Collection</h2>
+                <ul>
+                    <li><a class="text-white" href="#">Own Creation</a></li>
+                    <li><a class="text-white" href="#">Own Creation</a></li>
+                    <li><a class="text-white" href="#">Own Creation</a></li>
+                    <li><a class="text-white" href="#">Own Creation</a></li>
+                    <li><a class="text-white" href="#">Own Creation</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-xl text-amber-600 mb-5">Exclusive Collection</h2>
+                <ul>
+                    <li><a class="text-white" href="#">Own Creation</a></li>
+                    <li><a class="text-white" href="#">Own Creation</a></li>
+                    <li><a class="text-white" href="#">Own Creation</a></li>
+                    <li><a class="text-white" href="#">Own Creation</a></li>
+                    <li><a class="text-white" href="#">Own Creation</a></li>
+                </ul>
+            </div>
+            <div>
+                <h2 class="text-xl text-amber-600 mb-5">Exclusive Collection</h2>
+                <ul>
+                    <li><a class="text-white" href="#">Deals, Discounts & Updates from Rawaha. No spam, we promise. 😇</a></li>
+                </ul>
+                <div>
+                    <input type="text">
+                    <a href="#" class="bg-white"><i class="fa fa-paper-plane text-blue-950 " aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="slider.js"></script>
 
 </body>
 </html>
