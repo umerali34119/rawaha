@@ -23,4 +23,19 @@
   display: grid;
   grid-template-columns: 300px auto;
   grid-gap: 50px;
+}
+
+.single-product-grid {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  grid-gap: 40px;
+}
+@media (min-width: 768px) {
+  .single-product-grid {
+    display: grid;
+  }
+}
+
+.flickity-viewport {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
