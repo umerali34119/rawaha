@@ -5,6 +5,7 @@
 }
 body {
     font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
 }
 
 .c-w {
@@ -42,4 +43,11 @@ body {
   
 .flickity-viewport {
     width: 100%;
+}
+
+
+
+.sideBar{
+    transform: translateX(0)!important;
+    transition: 1s all ease-in-out !important;
 }
